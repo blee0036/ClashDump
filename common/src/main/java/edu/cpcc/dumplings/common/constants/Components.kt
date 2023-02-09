@@ -1,0 +1,11 @@
+package edu.cpcc.dumplings.common.constants
+
+import android.content.ComponentName
+import edu.cpcc.dumplings.common.util.packageName
+
+object Components {
+    private const val componentsPackageName = "edu.cpcc.dumplings"
+
+    val MAIN_ACTIVITY = ComponentName(packageName, "$componentsPackageName.MainActivity")
+    val PROPERTIES_ACTIVITY = ComponentName(packageName, "$componentsPackageName.PropertiesActivity")
+}

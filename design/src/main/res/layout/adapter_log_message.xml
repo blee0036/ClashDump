@@ -3,8 +3,8 @@
     <data>
         <variable
             name="message"
-            type="com.github.kr328.clash.core.model.LogMessage" />
-        <import type="com.github.kr328.clash.design.util.I18nKt" />
+            type="edu.cpcc.dumplings.core.model.LogMessage" />
+        <import type="edu.cpcc.dumplings.design.util.I18nKt" />
     </data>
 
     <LinearLayout

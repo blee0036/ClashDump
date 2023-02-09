@@ -34,14 +34,14 @@ subprojects {
     extensions.configure<BaseExtension> {
         defaultConfig {
             if (isApp) {
-                applicationId = "com.github.kr328.clash"
+                applicationId = "edu.cpcc.dumplings"
             }
 
             minSdk = 21
             targetSdk = 31
 
-            versionName = "2.5.12"
-            versionCode = 205012
+            versionName = "11.45.14"
+            versionCode = 114514
 
             resValue("string", "release_name", "v$versionName")
             resValue("integer", "release_code", "$versionCode")
