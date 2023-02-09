@@ -2,8 +2,7 @@ package edu.cpcc.dumplings.design
 
 import android.content.Context
 import android.view.View
-import com.github.kr328.clash.design.R
-import com.github.kr328.clash.design.databinding.DesignSettingsCommonBinding
+import edu.cpcc.dumplings.design.databinding.DesignSettingsCommonBinding
 import edu.cpcc.dumplings.design.preference.category
 import edu.cpcc.dumplings.design.preference.clickable
 import edu.cpcc.dumplings.design.preference.preferenceScreen
