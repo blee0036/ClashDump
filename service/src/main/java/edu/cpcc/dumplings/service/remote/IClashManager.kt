@@ -1,6 +1,5 @@
 package edu.cpcc.dumplings.service.remote
 
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.core.model.*
 import com.github.kr328.kaidl.BinderInterface
 
@@ -18,9 +17,9 @@ interface IClashManager {
     suspend fun healthCheck(group: String)
     suspend fun updateProvider(type: Provider.Type, name: String)
 
-    fun queryOverride(slot: Clash.OverrideSlot): ConfigurationOverride
-    fun patchOverride(slot: Clash.OverrideSlot, configuration: ConfigurationOverride)
-    fun clearOverride(slot: Clash.OverrideSlot)
+    fun queryOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot): ConfigurationOverride
+    fun patchOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot, configuration: ConfigurationOverride)
+    fun clearOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot)
 
     fun setLogObserver(observer: ILogObserver?)
 }

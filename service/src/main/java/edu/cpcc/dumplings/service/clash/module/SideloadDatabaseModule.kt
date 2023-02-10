@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Intent
 import edu.cpcc.dumplings.common.constants.Intents
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.service.sideload.readGeoipDatabaseFrom
 import edu.cpcc.dumplings.service.store.ServiceStore
 import edu.cpcc.dumplings.service.util.packageName
@@ -67,7 +66,7 @@ class SideloadDatabaseModule(service: Service) :
                 if (pkg.isNotBlank()) {
                     val data = service.readGeoipDatabaseFrom(pkg)
 
-                    Clash.installSideloadGeoip(data)
+                    _root_ide_package_.com.github.kr328.clash.core.Clash.installSideloadGeoip(data)
 
                     if (data != null) {
                         Log.d("Sideload geoip loaded, pkg = $pkg")

@@ -3,7 +3,6 @@ package edu.cpcc.dumplings.service
 import android.content.Context
 import android.net.Uri
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.service.data.Imported
 import edu.cpcc.dumplings.service.data.ImportedDao
 import edu.cpcc.dumplings.service.data.Pending
@@ -47,7 +46,7 @@ object ProfileProcessor {
                 val force = snapshot.type != Profile.Type.File
                 var cb = callback
 
-                Clash.fetchAndValid(context.processingDir, snapshot.source, force) {
+                _root_ide_package_.com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, force) {
                     try {
                         cb?.updateStatus(it)
                     } catch (e: Exception) {
@@ -111,7 +110,7 @@ object ProfileProcessor {
 
                 var cb = callback
 
-                Clash.fetchAndValid(context.processingDir, snapshot.source, true) {
+                _root_ide_package_.com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, true) {
                     try {
                         cb?.updateStatus(it)
                     } catch (e: Exception) {

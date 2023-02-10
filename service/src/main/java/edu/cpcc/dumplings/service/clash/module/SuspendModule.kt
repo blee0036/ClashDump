@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.PowerManager
 import androidx.core.content.getSystemService
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.withContext
@@ -14,7 +13,7 @@ class SuspendModule(service: Service) : Module<Unit>(service) {
     override suspend fun run() {
         val interactive = service.getSystemService<PowerManager>()?.isInteractive ?: true
 
-        Clash.suspendCore(!interactive)
+        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(!interactive)
 
         val screenToggle = receiveBroadcast(false, Channel.CONFLATED) {
             addAction(Intent.ACTION_SCREEN_ON)
@@ -25,25 +24,25 @@ class SuspendModule(service: Service) : Module<Unit>(service) {
             while (true) {
                 when (screenToggle.receive().action) {
                     Intent.ACTION_SCREEN_ON -> {
-                        Clash.suspendCore(false)
+                        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(false)
 
                         Log.d("Clash resumed")
                     }
                     Intent.ACTION_SCREEN_OFF -> {
-                        Clash.suspendCore(true)
+                        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(true)
 
                         Log.d("Clash suspended")
                     }
                     else -> {
                         // unreachable
 
-                        Clash.healthCheckAll()
+                        _root_ide_package_.com.github.kr328.clash.core.Clash.healthCheckAll()
                     }
                 }
             }
         } finally {
             withContext(NonCancellable) {
-                Clash.suspendCore(false)
+                _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(false)
             }
         }
     }

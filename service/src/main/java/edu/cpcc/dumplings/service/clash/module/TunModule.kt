@@ -4,7 +4,6 @@ import android.net.ConnectivityManager
 import android.net.VpnService
 import android.os.Build
 import androidx.core.content.getSystemService
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.core.util.parseInetSocketAddress
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.channels.Channel
@@ -48,13 +47,13 @@ class TunModule(private val vpn: VpnService) : Module<Unit>(vpn) {
     fun listenHttp(): InetSocketAddress? {
         val r = { 1 + random.nextInt(199) }
         val listenAt = "127.${r()}.${r()}.${r()}:0"
-        val address = Clash.startHttp(listenAt)
+        val address = _root_ide_package_.com.github.kr328.clash.core.Clash.startHttp(listenAt)
 
         return address?.let(::parseInetSocketAddress)
     }
 
     fun attach(device: TunDevice) {
-        Clash.startTun(
+        _root_ide_package_.com.github.kr328.clash.core.Clash.startTun(
             fd = device.fd,
             gateway = device.gateway,
             portal = device.portal,
@@ -72,8 +71,8 @@ class TunModule(private val vpn: VpnService) : Module<Unit>(vpn) {
         private val random = SecureRandom()
 
         fun requestStop() {
-            Clash.stopHttp()
-            Clash.stopTun()
+            _root_ide_package_.com.github.kr328.clash.core.Clash.stopHttp()
+            _root_ide_package_.com.github.kr328.clash.core.Clash.stopTun()
         }
     }
 }

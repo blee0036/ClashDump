@@ -3,7 +3,6 @@ package edu.cpcc.dumplings.service.clash.module
 import android.app.Service
 import edu.cpcc.dumplings.common.constants.Intents
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.service.StatusProvider
 import edu.cpcc.dumplings.service.data.ImportedDao
 import edu.cpcc.dumplings.service.data.SelectionDao
@@ -55,10 +54,10 @@ class ConfigurationModule(service: Service) : Module<ConfigurationModule.LoadExc
                 val active = ImportedDao().queryByUUID(current)
                     ?: throw NullPointerException("No profile selected")
 
-                Clash.load(service.importedDir.resolve(active.uuid.toString())).await()
+                _root_ide_package_.com.github.kr328.clash.core.Clash.load(service.importedDir.resolve(active.uuid.toString())).await()
 
                 val remove = SelectionDao().querySelections(active.uuid)
-                    .filterNot { Clash.patchSelector(it.proxy, it.selected) }
+                    .filterNot { _root_ide_package_.com.github.kr328.clash.core.Clash.patchSelector(it.proxy, it.selected) }
                     .map { it.proxy }
 
                 SelectionDao().removeSelections(active.uuid, remove)

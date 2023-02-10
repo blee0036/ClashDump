@@ -1,4 +1,4 @@
-package edu.cpcc.dumplings.core.util
+package com.github.kr328.clash.core.util
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind

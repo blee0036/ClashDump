@@ -1,4 +1,4 @@
-package edu.cpcc.dumplings.core.bridge
+package com.github.kr328.clash.core.bridge
 
 import android.os.Build
 import android.os.ParcelFileDescriptor

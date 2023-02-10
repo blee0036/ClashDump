@@ -1,4 +1,4 @@
-package edu.cpcc.dumplings.core
+package com.github.kr328.clash.core
 
 import edu.cpcc.dumplings.core.bridge.*
 import edu.cpcc.dumplings.core.model.*
@@ -183,9 +183,9 @@ object Clash {
         }
     }
 
-    fun queryOverride(slot: OverrideSlot): ConfigurationOverride {
+    fun queryOverride(slot: com.github.kr328.clash.core.Clash.OverrideSlot): ConfigurationOverride {
         return try {
-            ConfigurationOverrideJson.decodeFromString(
+            _root_ide_package_.com.github.kr328.clash.core.Clash.ConfigurationOverrideJson.decodeFromString(
                 ConfigurationOverride.serializer(),
                 Bridge.nativeReadOverride(slot.ordinal)
             )
@@ -194,17 +194,17 @@ object Clash {
         }
     }
 
-    fun patchOverride(slot: OverrideSlot, configuration: ConfigurationOverride) {
+    fun patchOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot, configuration: ConfigurationOverride) {
         Bridge.nativeWriteOverride(
             slot.ordinal,
-            ConfigurationOverrideJson.encodeToString(
+            _root_ide_package_.com.github.kr328.clash.core.Clash.ConfigurationOverrideJson.encodeToString(
                 ConfigurationOverride.serializer(),
                 configuration
             )
         )
     }
 
-    fun clearOverride(slot: OverrideSlot) {
+    fun clearOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot) {
         Bridge.nativeClearOverride(slot.ordinal)
     }
 

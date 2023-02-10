@@ -11,7 +11,6 @@ import edu.cpcc.dumplings.common.compat.pendingIntentFlags
 import edu.cpcc.dumplings.common.constants.Components
 import edu.cpcc.dumplings.common.constants.Intents
 import edu.cpcc.dumplings.common.util.ticker
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.core.util.trafficDownload
 import edu.cpcc.dumplings.core.util.trafficUpload
 import edu.cpcc.dumplings.service.R
@@ -41,8 +40,8 @@ class DynamicNotificationModule(service: Service) : Module<Unit>(service) {
         )
 
     private fun update() {
-        val now = Clash.queryTrafficNow()
-        val total = Clash.queryTrafficTotal()
+        val now = _root_ide_package_.com.github.kr328.clash.core.Clash.queryTrafficNow()
+        val total = _root_ide_package_.com.github.kr328.clash.core.Clash.queryTrafficTotal()
 
         val uploading = now.trafficUpload()
         val downloading = now.trafficDownload()

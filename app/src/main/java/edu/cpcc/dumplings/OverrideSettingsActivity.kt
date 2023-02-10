@@ -3,7 +3,6 @@ package edu.cpcc.dumplings
 import android.content.pm.PackageManager
 import edu.cpcc.dumplings.common.compat.getDrawableCompat
 import edu.cpcc.dumplings.common.constants.Metadata
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.design.OverrideSettingsDesign
 import edu.cpcc.dumplings.design.model.AppInfo
 import edu.cpcc.dumplings.design.util.toAppInfo
@@ -16,12 +15,12 @@ import kotlinx.coroutines.withContext
 
 class OverrideSettingsActivity : BaseActivity<OverrideSettingsDesign>() {
     override suspend fun main() {
-        val configuration = withClash { queryOverride(Clash.OverrideSlot.Persist) }
+        val configuration = withClash { queryOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Persist) }
         val service = ServiceStore(this)
 
         defer {
             withClash {
-                patchOverride(Clash.OverrideSlot.Persist, configuration)
+                patchOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Persist, configuration)
             }
         }
 
@@ -43,7 +42,7 @@ class OverrideSettingsActivity : BaseActivity<OverrideSettingsDesign>() {
                             if (design.requestResetConfirm()) {
                                 defer {
                                     withClash {
-                                        clearOverride(Clash.OverrideSlot.Persist)
+                                        clearOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Persist)
                                     }
 
                                     service.sideloadGeoip = ""

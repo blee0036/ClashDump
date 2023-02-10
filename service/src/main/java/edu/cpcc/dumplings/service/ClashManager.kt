@@ -2,7 +2,6 @@ package edu.cpcc.dumplings.service
 
 import android.content.Context
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.core.model.*
 import edu.cpcc.dumplings.service.data.Selection
 import edu.cpcc.dumplings.service.data.SelectionDao
@@ -19,35 +18,35 @@ class ClashManager(private val context: Context) : IClashManager,
     private var logReceiver: ReceiveChannel<LogMessage>? = null
 
     override fun queryTunnelState(): TunnelState {
-        return Clash.queryTunnelState()
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryTunnelState()
     }
 
     override fun queryTrafficTotal(): Long {
-        return Clash.queryTrafficTotal()
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryTrafficTotal()
     }
 
     override fun queryProxyGroupNames(excludeNotSelectable: Boolean): List<String> {
-        return Clash.queryGroupNames(excludeNotSelectable)
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryGroupNames(excludeNotSelectable)
     }
 
     override fun queryProxyGroup(name: String, proxySort: ProxySort): ProxyGroup {
-        return Clash.queryGroup(name, proxySort)
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryGroup(name, proxySort)
     }
 
     override fun queryConfiguration(): UiConfiguration {
-        return Clash.queryConfiguration()
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryConfiguration()
     }
 
     override fun queryProviders(): ProviderList {
-        return ProviderList(Clash.queryProviders())
+        return ProviderList(_root_ide_package_.com.github.kr328.clash.core.Clash.queryProviders())
     }
 
-    override fun queryOverride(slot: Clash.OverrideSlot): ConfigurationOverride {
-        return Clash.queryOverride(slot)
+    override fun queryOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot): ConfigurationOverride {
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.queryOverride(slot)
     }
 
     override fun patchSelector(group: String, name: String): Boolean {
-        return Clash.patchSelector(group, name).also {
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.patchSelector(group, name).also {
             val current = store.activeProfile ?: return@also
 
             if (it) {
@@ -58,22 +57,22 @@ class ClashManager(private val context: Context) : IClashManager,
         }
     }
 
-    override fun patchOverride(slot: Clash.OverrideSlot, configuration: ConfigurationOverride) {
-        Clash.patchOverride(slot, configuration)
+    override fun patchOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot, configuration: ConfigurationOverride) {
+        _root_ide_package_.com.github.kr328.clash.core.Clash.patchOverride(slot, configuration)
 
         context.sendOverrideChanged()
     }
 
-    override fun clearOverride(slot: Clash.OverrideSlot) {
-        Clash.clearOverride(slot)
+    override fun clearOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot) {
+        _root_ide_package_.com.github.kr328.clash.core.Clash.clearOverride(slot)
     }
 
     override suspend fun healthCheck(group: String) {
-        return Clash.healthCheck(group).await()
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.healthCheck(group).await()
     }
 
     override suspend fun updateProvider(type: Provider.Type, name: String) {
-        return Clash.updateProvider(type, name).await()
+        return _root_ide_package_.com.github.kr328.clash.core.Clash.updateProvider(type, name).await()
     }
 
     override fun setLogObserver(observer: ILogObserver?) {
@@ -81,11 +80,11 @@ class ClashManager(private val context: Context) : IClashManager,
             logReceiver?.apply {
                 cancel()
 
-                Clash.forceGc()
+                _root_ide_package_.com.github.kr328.clash.core.Clash.forceGc()
             }
 
             if (observer != null) {
-                logReceiver = Clash.subscribeLogcat().also { c ->
+                logReceiver = _root_ide_package_.com.github.kr328.clash.core.Clash.subscribeLogcat().also { c ->
                     launch {
                         try {
                             while (isActive) {
@@ -100,7 +99,7 @@ class ClashManager(private val context: Context) : IClashManager,
                             withContext(NonCancellable) {
                                 c.cancel()
 
-                                Clash.forceGc()
+                                _root_ide_package_.com.github.kr328.clash.core.Clash.forceGc()
                             }
                         }
                     }

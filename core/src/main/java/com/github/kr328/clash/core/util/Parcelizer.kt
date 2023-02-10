@@ -1,4 +1,4 @@
-package edu.cpcc.dumplings.core.util
+package com.github.kr328.clash.core.util
 
 import android.os.Parcel
 import kotlinx.serialization.DeserializationStrategy
@@ -9,7 +9,6 @@ import kotlinx.serialization.encoding.CompositeDecoder
 import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.modules.EmptySerializersModule
 import kotlinx.serialization.modules.SerializersModule
 
 object Parcelizer {

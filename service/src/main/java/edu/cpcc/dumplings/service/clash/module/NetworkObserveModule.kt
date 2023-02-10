@@ -5,7 +5,6 @@ import android.net.*
 import android.os.Build
 import androidx.core.content.getSystemService
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.service.util.resolvePrimaryDns
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.channels.Channel
@@ -73,7 +72,7 @@ class NetworkObserveModule(service: Service) : Module<Network?>(service) {
                     connectivity.resolvePrimaryDns(it)
                 }
 
-                Clash.notifyDnsChanged(dns)
+                _root_ide_package_.com.github.kr328.clash.core.Clash.notifyDnsChanged(dns)
 
                 Log.d("DNS: $dns")
 
@@ -93,7 +92,7 @@ class NetworkObserveModule(service: Service) : Module<Network?>(service) {
             withContext(NonCancellable) {
                 enqueueEvent(null)
 
-                Clash.notifyDnsChanged(emptyList())
+                _root_ide_package_.com.github.kr328.clash.core.Clash.notifyDnsChanged(emptyList())
 
                 runCatching {
                     connectivity.unregisterNetworkCallback(callback)

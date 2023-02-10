@@ -1,7 +1,6 @@
 package edu.cpcc.dumplings
 
 import edu.cpcc.dumplings.common.util.intent
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.core.model.Proxy
 import edu.cpcc.dumplings.design.ProxyDesign
 import edu.cpcc.dumplings.design.model.ProxyState
@@ -17,7 +16,7 @@ import java.util.concurrent.TimeUnit
 
 class ProxyActivity : BaseActivity<ProxyDesign>() {
     override suspend fun main() {
-        val mode = withClash { queryOverride(Clash.OverrideSlot.Session).mode }
+        val mode = withClash { queryOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Session).mode }
         val names = withClash { queryProxyGroupNames(uiStore.proxyExcludeNotSelectable) }
         val states = List(names.size) { ProxyState("?") }
         val unorderedStates = names.indices.map { names[it] to states[it] }.toMap()
@@ -118,11 +117,11 @@ class ProxyActivity : BaseActivity<ProxyDesign>() {
                             design.showModeSwitchTips()
 
                             withClash {
-                                val o = queryOverride(Clash.OverrideSlot.Session)
+                                val o = queryOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Session)
 
                                 o.mode = it.mode
 
-                                patchOverride(Clash.OverrideSlot.Session, o)
+                                patchOverride(com.github.kr328.clash.core.Clash.OverrideSlot.Session, o)
                             }
                         }
                     }

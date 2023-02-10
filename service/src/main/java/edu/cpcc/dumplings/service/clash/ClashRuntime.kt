@@ -1,7 +1,6 @@
 package edu.cpcc.dumplings.service.clash
 
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.Clash
 import edu.cpcc.dumplings.service.clash.module.Module
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Mutex
@@ -28,8 +27,9 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
                     try {
                         val modules = mutableListOf<Module<*>>()
 
-                        Clash.reset()
-                        Clash.clearOverride(Clash.OverrideSlot.Session)
+                        _root_ide_package_.com.github.kr328.clash.core.Clash.reset()
+                        _root_ide_package_.com.github.kr328.clash.core.Clash.clearOverride(
+                            _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot.Session)
 
                         val scope = object : ClashRuntimeScope {
                             override fun <E, T : Module<E>> install(module: T): T {
@@ -48,8 +48,9 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
                         cancel()
                     } finally {
                         withContext(NonCancellable) {
-                            Clash.reset()
-                            Clash.clearOverride(Clash.OverrideSlot.Session)
+                            _root_ide_package_.com.github.kr328.clash.core.Clash.reset()
+                            _root_ide_package_.com.github.kr328.clash.core.Clash.clearOverride(
+                                _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot.Session)
 
                             Log.d("ClashRuntime: destroyed")
                         }
@@ -59,7 +60,7 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
         }
 
         override fun requestGc() {
-            Clash.forceGc()
+            _root_ide_package_.com.github.kr328.clash.core.Clash.forceGc()
         }
     }
 }
