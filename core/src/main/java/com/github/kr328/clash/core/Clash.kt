@@ -183,9 +183,9 @@ object Clash {
         }
     }
 
-    fun queryOverride(slot: com.github.kr328.clash.core.Clash.OverrideSlot): ConfigurationOverride {
+    fun queryOverride(slot: OverrideSlot): ConfigurationOverride {
         return try {
-            _root_ide_package_.com.github.kr328.clash.core.Clash.ConfigurationOverrideJson.decodeFromString(
+            ConfigurationOverrideJson.decodeFromString(
                 ConfigurationOverride.serializer(),
                 Bridge.nativeReadOverride(slot.ordinal)
             )
@@ -194,17 +194,17 @@ object Clash {
         }
     }
 
-    fun patchOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot, configuration: ConfigurationOverride) {
+    fun patchOverride(slot: OverrideSlot, configuration: ConfigurationOverride) {
         Bridge.nativeWriteOverride(
             slot.ordinal,
-            _root_ide_package_.com.github.kr328.clash.core.Clash.ConfigurationOverrideJson.encodeToString(
+            ConfigurationOverrideJson.encodeToString(
                 ConfigurationOverride.serializer(),
                 configuration
             )
         )
     }
 
-    fun clearOverride(slot: _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot) {
+    fun clearOverride(slot: OverrideSlot) {
         Bridge.nativeClearOverride(slot.ordinal)
     }
 
