@@ -305,7 +305,7 @@ Java_com_github_kr328_clash_core_bridge_Bridge_nativeInstallSideloadGeoip(JNIEnv
     if (err != NULL) {
         (*env)->ThrowNew(
                 env,
-                find_class("com/github/kr328/clash/core/bridge/ClashException"),
+                find_class("edu/cpcc/dumplings/core/bridge/ClashException"),
                 err
         );
     }
@@ -489,12 +489,12 @@ JNI_OnLoad(JavaVM *vm, void *reserved) {
 
     initialize_jni(vm, env);
 
-    jclass c_tun_interface = find_class("com/github/kr328/clash/core/bridge/TunInterface");
+    jclass c_tun_interface = find_class("edu/cpcc/dumplings/core/bridge/TunInterface");
     jclass c_completable = find_class("kotlinx/coroutines/CompletableDeferred");
-    jclass c_fetch_callback = find_class("com/github/kr328/clash/core/bridge/FetchCallback");
-    jclass c_logcat_interface = find_class("com/github/kr328/clash/core/bridge/LogcatInterface");
-    jclass _c_clash_exception = find_class("com/github/kr328/clash/core/bridge/ClashException");
-    jclass _c_content = find_class("com/github/kr328/clash/core/bridge/Content");
+    jclass c_fetch_callback = find_class("edu/cpcc/dumplings/core/bridge/FetchCallback");
+    jclass c_logcat_interface = find_class("edu/cpcc/dumplings/core/bridge/LogcatInterface");
+    jclass _c_clash_exception = find_class("edu/cpcc/dumplings/core/bridge/ClashException");
+    jclass _c_content = find_class("edu/cpcc/dumplings/core/bridge/Content");
     jclass c_throwable = find_class("java/lang/Throwable");
     jclass c_unit = find_class("kotlin/Unit");
 
