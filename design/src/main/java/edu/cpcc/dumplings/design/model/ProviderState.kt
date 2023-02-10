@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.design.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
-import edu.cpcc.dumplings.core.model.Provider
+import com.github.kr328.clash.core.model.Provider
 import edu.cpcc.dumplings.design.BR
 
 class ProviderState(

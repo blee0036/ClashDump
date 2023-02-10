@@ -3,7 +3,7 @@ package edu.cpcc.dumplings.design.adapter
 import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import edu.cpcc.dumplings.design.databinding.AdapterLogMessageBinding
 import edu.cpcc.dumplings.design.util.layoutInflater
 

@@ -3,7 +3,7 @@
     <data>
         <variable
             name="provider"
-            type="edu.cpcc.dumplings.core.model.Provider" />
+            type="com.github.kr328.clash.core.model.Provider" />
         <variable
             name="state"
             type="edu.cpcc.dumplings.design.model.ProviderState" />

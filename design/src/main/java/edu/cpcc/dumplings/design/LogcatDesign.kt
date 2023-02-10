@@ -6,7 +6,7 @@ import android.content.Context
 import android.view.View
 import androidx.core.content.getSystemService
 import androidx.recyclerview.widget.LinearLayoutManager
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import edu.cpcc.dumplings.design.adapter.LogMessageAdapter
 import edu.cpcc.dumplings.design.databinding.DesignLogcatBinding
 import edu.cpcc.dumplings.design.ui.ToastDuration

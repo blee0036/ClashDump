@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import edu.cpcc.dumplings.core.model.Provider
+import com.github.kr328.clash.core.model.Provider
 import edu.cpcc.dumplings.design.databinding.AdapterProviderBinding
 import edu.cpcc.dumplings.design.model.ProviderState
 import edu.cpcc.dumplings.design.ui.ObservableCurrentTime

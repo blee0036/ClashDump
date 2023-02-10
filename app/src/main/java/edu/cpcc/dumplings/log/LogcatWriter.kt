@@ -1,7 +1,7 @@
 package edu.cpcc.dumplings.log
 
 import android.content.Context
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import edu.cpcc.dumplings.design.model.LogFile
 import edu.cpcc.dumplings.util.logsDir
 import java.io.BufferedWriter

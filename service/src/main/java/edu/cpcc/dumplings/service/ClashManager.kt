@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.service
 
 import android.content.Context
 import edu.cpcc.dumplings.common.log.Log
-import edu.cpcc.dumplings.core.model.*
+import com.github.kr328.clash.core.model.*
 import edu.cpcc.dumplings.service.data.Selection
 import edu.cpcc.dumplings.service.data.SelectionDao
 import edu.cpcc.dumplings.service.remote.IClashManager

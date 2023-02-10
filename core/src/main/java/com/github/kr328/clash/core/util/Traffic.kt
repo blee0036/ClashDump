@@ -1,6 +1,6 @@
 package com.github.kr328.clash.core.util
 
-import edu.cpcc.dumplings.core.model.Traffic
+import com.github.kr328.clash.core.model.Traffic
 
 fun Traffic.trafficUpload(): String {
     return trafficString(scaleTraffic(this ushr 32))

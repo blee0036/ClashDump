@@ -1,8 +1,8 @@
 package com.github.kr328.clash.core
 
-import edu.cpcc.dumplings.core.bridge.*
-import edu.cpcc.dumplings.core.model.*
-import edu.cpcc.dumplings.core.util.parseInetSocketAddress
+import com.github.kr328.clash.core.bridge.*
+import com.github.kr328.clash.core.model.*
+import com.github.kr328.clash.core.util.parseInetSocketAddress
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.channels.ReceiveChannel

@@ -11,8 +11,8 @@ import edu.cpcc.dumplings.common.compat.pendingIntentFlags
 import edu.cpcc.dumplings.common.constants.Components
 import edu.cpcc.dumplings.common.constants.Intents
 import edu.cpcc.dumplings.common.util.ticker
-import edu.cpcc.dumplings.core.util.trafficDownload
-import edu.cpcc.dumplings.core.util.trafficUpload
+import com.github.kr328.clash.core.util.trafficDownload
+import com.github.kr328.clash.core.util.trafficUpload
 import edu.cpcc.dumplings.service.R
 import edu.cpcc.dumplings.service.StatusProvider
 import kotlinx.coroutines.channels.Channel

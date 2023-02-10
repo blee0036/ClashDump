@@ -11,7 +11,7 @@ import edu.cpcc.dumplings.common.compat.startForegroundServiceCompat
 import edu.cpcc.dumplings.common.util.fileName
 import edu.cpcc.dumplings.common.util.intent
 import edu.cpcc.dumplings.common.util.ticker
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import edu.cpcc.dumplings.design.LogcatDesign
 import edu.cpcc.dumplings.design.dialog.withModelProgressBar
 import edu.cpcc.dumplings.design.model.LogFile

@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.design
 
 import android.content.Context
 import android.view.View
-import edu.cpcc.dumplings.core.model.Provider
+import com.github.kr328.clash.core.model.Provider
 import edu.cpcc.dumplings.design.adapter.ProviderAdapter
 import edu.cpcc.dumplings.design.databinding.DesignProvidersBinding
 import edu.cpcc.dumplings.design.util.*

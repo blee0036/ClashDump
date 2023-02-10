@@ -3,7 +3,7 @@ package edu.cpcc.dumplings.design.store
 import android.content.Context
 import edu.cpcc.dumplings.common.store.Store
 import edu.cpcc.dumplings.common.store.asStoreProvider
-import edu.cpcc.dumplings.core.model.ProxySort
+import com.github.kr328.clash.core.model.ProxySort
 import edu.cpcc.dumplings.design.model.AppInfoSort
 import edu.cpcc.dumplings.design.model.DarkMode
 

@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.design.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import edu.cpcc.dumplings.core.model.Proxy
+import com.github.kr328.clash.core.model.Proxy
 import edu.cpcc.dumplings.design.R
 import edu.cpcc.dumplings.design.component.ProxyPageFactory
 import edu.cpcc.dumplings.design.component.ProxyViewConfig

@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.PopupMenu
-import edu.cpcc.dumplings.core.model.ProxySort
-import edu.cpcc.dumplings.core.model.TunnelState
+import com.github.kr328.clash.core.model.ProxySort
+import com.github.kr328.clash.core.model.TunnelState
 import edu.cpcc.dumplings.design.BuildConfig
 import edu.cpcc.dumplings.design.ProxyDesign
 import edu.cpcc.dumplings.design.R

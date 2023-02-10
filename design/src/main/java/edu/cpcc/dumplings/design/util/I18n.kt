@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.design.util
 
 import android.content.Context
 import edu.cpcc.dumplings.common.compat.preferredLocale
-import edu.cpcc.dumplings.core.model.Provider
+import com.github.kr328.clash.core.model.Provider
 import edu.cpcc.dumplings.design.R
 import edu.cpcc.dumplings.service.model.Profile
 import java.text.SimpleDateFormat

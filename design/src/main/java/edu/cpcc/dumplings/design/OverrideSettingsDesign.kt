@@ -2,9 +2,9 @@ package edu.cpcc.dumplings.design
 
 import android.content.Context
 import android.view.View
-import edu.cpcc.dumplings.core.model.ConfigurationOverride
-import edu.cpcc.dumplings.core.model.LogMessage
-import edu.cpcc.dumplings.core.model.TunnelState
+import com.github.kr328.clash.core.model.ConfigurationOverride
+import com.github.kr328.clash.core.model.LogMessage
+import com.github.kr328.clash.core.model.TunnelState
 import edu.cpcc.dumplings.design.adapter.SideloadProviderAdapter
 import edu.cpcc.dumplings.design.databinding.DesignSettingsOverideBinding
 import edu.cpcc.dumplings.design.databinding.DialogPreferenceListBinding

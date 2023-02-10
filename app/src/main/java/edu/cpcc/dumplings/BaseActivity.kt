@@ -10,7 +10,7 @@ import edu.cpcc.dumplings.common.compat.isAllowForceDarkCompat
 import edu.cpcc.dumplings.common.compat.isLightNavigationBarCompat
 import edu.cpcc.dumplings.common.compat.isLightStatusBarsCompat
 import edu.cpcc.dumplings.common.compat.isSystemBarsTranslucentCompat
-import edu.cpcc.dumplings.core.bridge.ClashException
+import com.github.kr328.clash.core.bridge.ClashException
 import edu.cpcc.dumplings.design.Design
 import edu.cpcc.dumplings.design.model.DarkMode
 import edu.cpcc.dumplings.design.store.UiStore

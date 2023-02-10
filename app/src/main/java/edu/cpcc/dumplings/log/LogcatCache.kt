@@ -1,7 +1,7 @@
 package edu.cpcc.dumplings.log
 
 import androidx.collection.CircularArray
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 

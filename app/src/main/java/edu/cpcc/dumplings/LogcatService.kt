@@ -16,7 +16,7 @@ import edu.cpcc.dumplings.common.compat.getColorCompat
 import edu.cpcc.dumplings.common.compat.pendingIntentFlags
 import edu.cpcc.dumplings.common.log.Log
 import edu.cpcc.dumplings.common.util.intent
-import edu.cpcc.dumplings.core.model.LogMessage
+import com.github.kr328.clash.core.model.LogMessage
 import edu.cpcc.dumplings.log.LogcatCache
 import edu.cpcc.dumplings.log.LogcatWriter
 import edu.cpcc.dumplings.service.RemoteService

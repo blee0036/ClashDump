@@ -3,8 +3,8 @@ package edu.cpcc.dumplings.design
 import android.content.Context
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import edu.cpcc.dumplings.core.model.TunnelState
-import edu.cpcc.dumplings.core.util.trafficTotal
+import com.github.kr328.clash.core.model.TunnelState
+import com.github.kr328.clash.core.util.trafficTotal
 import edu.cpcc.dumplings.design.databinding.DesignAboutBinding
 import edu.cpcc.dumplings.design.databinding.DesignMainBinding
 import edu.cpcc.dumplings.design.util.layoutInflater

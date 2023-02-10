@@ -5,8 +5,8 @@ import android.content.res.ColorStateList
 import android.view.View
 import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
-import edu.cpcc.dumplings.core.model.Proxy
-import edu.cpcc.dumplings.core.model.TunnelState
+import com.github.kr328.clash.core.model.Proxy
+import com.github.kr328.clash.core.model.TunnelState
 import edu.cpcc.dumplings.design.adapter.ProxyAdapter
 import edu.cpcc.dumplings.design.adapter.ProxyPageAdapter
 import edu.cpcc.dumplings.design.component.ProxyMenu

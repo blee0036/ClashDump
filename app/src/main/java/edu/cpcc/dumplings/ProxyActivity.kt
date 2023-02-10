@@ -1,7 +1,7 @@
 package edu.cpcc.dumplings
 
 import edu.cpcc.dumplings.common.util.intent
-import edu.cpcc.dumplings.core.model.Proxy
+import com.github.kr328.clash.core.model.Proxy
 import edu.cpcc.dumplings.design.ProxyDesign
 import edu.cpcc.dumplings.design.model.ProxyState
 import edu.cpcc.dumplings.store.TipsStore

@@ -2,7 +2,7 @@ package edu.cpcc.dumplings.design
 
 import android.content.Context
 import android.view.View
-import edu.cpcc.dumplings.core.model.FetchStatus
+import com.github.kr328.clash.core.model.FetchStatus
 import edu.cpcc.dumplings.design.databinding.DesignPropertiesBinding
 import edu.cpcc.dumplings.design.dialog.ModelProgressBarConfigure
 import edu.cpcc.dumplings.design.dialog.requestModelTextInput

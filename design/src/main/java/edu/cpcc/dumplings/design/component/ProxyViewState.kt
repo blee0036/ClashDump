@@ -4,7 +4,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.Rect
-import edu.cpcc.dumplings.core.model.Proxy
+import com.github.kr328.clash.core.model.Proxy
 import edu.cpcc.dumplings.design.model.ProxyState
 import kotlin.math.absoluteValue
 import kotlin.math.max
