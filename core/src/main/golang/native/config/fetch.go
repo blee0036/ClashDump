@@ -39,7 +39,7 @@ func openUrl(url string) (io.ReadCloser, error) {
 		return nil, err
 	}
 
-	request.Header.Set("User-Agent", "ClashForAndroid/"+app.VersionName())
+	request.Header.Set("User-Agent", "Dumplings/"+app.VersionName())
 
 	response, err := client.Do(request)
 	if err != nil {

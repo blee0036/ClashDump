@@ -5,7 +5,7 @@
 #include <malloc.h>
 #include <android/log.h>
 
-#define TAG "ClashForAndroid"
+#define TAG "Dumplings"
 
 typedef const char *c_string;
 
