@@ -66,7 +66,7 @@ class SideloadDatabaseModule(service: Service) :
                 if (pkg.isNotBlank()) {
                     val data = service.readGeoipDatabaseFrom(pkg)
 
-                    _root_ide_package_.com.github.kr328.clash.core.Clash.installSideloadGeoip(data)
+                    com.github.kr328.clash.core.Clash.installSideloadGeoip(data)
 
                     if (data != null) {
                         Log.d("Sideload geoip loaded, pkg = $pkg")

@@ -28,7 +28,7 @@ class AppListCacheModule(service: Service) : Module<Unit>(service) {
                 }
             }
 
-        _root_ide_package_.com.github.kr328.clash.core.Clash.notifyInstalledAppsChanged(packages)
+        com.github.kr328.clash.core.Clash.notifyInstalledAppsChanged(packages)
 
         Log.d("Installed ${packages.size} packages cached")
     }

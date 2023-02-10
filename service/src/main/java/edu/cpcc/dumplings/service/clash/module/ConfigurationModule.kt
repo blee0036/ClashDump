@@ -54,10 +54,10 @@ class ConfigurationModule(service: Service) : Module<ConfigurationModule.LoadExc
                 val active = ImportedDao().queryByUUID(current)
                     ?: throw NullPointerException("No profile selected")
 
-                _root_ide_package_.com.github.kr328.clash.core.Clash.load(service.importedDir.resolve(active.uuid.toString())).await()
+                com.github.kr328.clash.core.Clash.load(service.importedDir.resolve(active.uuid.toString())).await()
 
                 val remove = SelectionDao().querySelections(active.uuid)
-                    .filterNot { _root_ide_package_.com.github.kr328.clash.core.Clash.patchSelector(it.proxy, it.selected) }
+                    .filterNot { com.github.kr328.clash.core.Clash.patchSelector(it.proxy, it.selected) }
                     .map { it.proxy }
 
                 SelectionDao().removeSelections(active.uuid, remove)

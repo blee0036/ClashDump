@@ -72,7 +72,7 @@ class NetworkObserveModule(service: Service) : Module<Network?>(service) {
                     connectivity.resolvePrimaryDns(it)
                 }
 
-                _root_ide_package_.com.github.kr328.clash.core.Clash.notifyDnsChanged(dns)
+                com.github.kr328.clash.core.Clash.notifyDnsChanged(dns)
 
                 Log.d("DNS: $dns")
 
@@ -92,7 +92,7 @@ class NetworkObserveModule(service: Service) : Module<Network?>(service) {
             withContext(NonCancellable) {
                 enqueueEvent(null)
 
-                _root_ide_package_.com.github.kr328.clash.core.Clash.notifyDnsChanged(emptyList())
+                com.github.kr328.clash.core.Clash.notifyDnsChanged(emptyList())
 
                 runCatching {
                     connectivity.unregisterNetworkCallback(callback)

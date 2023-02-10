@@ -46,7 +46,7 @@ object ProfileProcessor {
                 val force = snapshot.type != Profile.Type.File
                 var cb = callback
 
-                _root_ide_package_.com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, force) {
+                com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, force) {
                     try {
                         cb?.updateStatus(it)
                     } catch (e: Exception) {
@@ -110,7 +110,7 @@ object ProfileProcessor {
 
                 var cb = callback
 
-                _root_ide_package_.com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, true) {
+                com.github.kr328.clash.core.Clash.fetchAndValid(context.processingDir, snapshot.source, true) {
                     try {
                         cb?.updateStatus(it)
                     } catch (e: Exception) {

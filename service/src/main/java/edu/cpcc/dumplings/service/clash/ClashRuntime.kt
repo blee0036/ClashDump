@@ -27,9 +27,9 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
                     try {
                         val modules = mutableListOf<Module<*>>()
 
-                        _root_ide_package_.com.github.kr328.clash.core.Clash.reset()
-                        _root_ide_package_.com.github.kr328.clash.core.Clash.clearOverride(
-                            _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot.Session)
+                        com.github.kr328.clash.core.Clash.reset()
+                        com.github.kr328.clash.core.Clash.clearOverride(
+                            com.github.kr328.clash.core.Clash.OverrideSlot.Session)
 
                         val scope = object : ClashRuntimeScope {
                             override fun <E, T : Module<E>> install(module: T): T {
@@ -48,9 +48,9 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
                         cancel()
                     } finally {
                         withContext(NonCancellable) {
-                            _root_ide_package_.com.github.kr328.clash.core.Clash.reset()
-                            _root_ide_package_.com.github.kr328.clash.core.Clash.clearOverride(
-                                _root_ide_package_.com.github.kr328.clash.core.Clash.OverrideSlot.Session)
+                            com.github.kr328.clash.core.Clash.reset()
+                            com.github.kr328.clash.core.Clash.clearOverride(
+                                com.github.kr328.clash.core.Clash.OverrideSlot.Session)
 
                             Log.d("ClashRuntime: destroyed")
                         }
@@ -60,7 +60,7 @@ fun CoroutineScope.clashRuntime(block: suspend ClashRuntimeScope.() -> Unit): Cl
         }
 
         override fun requestGc() {
-            _root_ide_package_.com.github.kr328.clash.core.Clash.forceGc()
+            com.github.kr328.clash.core.Clash.forceGc()
         }
     }
 }

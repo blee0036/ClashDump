@@ -47,13 +47,13 @@ class TunModule(private val vpn: VpnService) : Module<Unit>(vpn) {
     fun listenHttp(): InetSocketAddress? {
         val r = { 1 + random.nextInt(199) }
         val listenAt = "127.${r()}.${r()}.${r()}:0"
-        val address = _root_ide_package_.com.github.kr328.clash.core.Clash.startHttp(listenAt)
+        val address = com.github.kr328.clash.core.Clash.startHttp(listenAt)
 
         return address?.let(::parseInetSocketAddress)
     }
 
     fun attach(device: TunDevice) {
-        _root_ide_package_.com.github.kr328.clash.core.Clash.startTun(
+        com.github.kr328.clash.core.Clash.startTun(
             fd = device.fd,
             gateway = device.gateway,
             portal = device.portal,
@@ -71,8 +71,8 @@ class TunModule(private val vpn: VpnService) : Module<Unit>(vpn) {
         private val random = SecureRandom()
 
         fun requestStop() {
-            _root_ide_package_.com.github.kr328.clash.core.Clash.stopHttp()
-            _root_ide_package_.com.github.kr328.clash.core.Clash.stopTun()
+            com.github.kr328.clash.core.Clash.stopHttp()
+            com.github.kr328.clash.core.Clash.stopTun()
         }
     }
 }

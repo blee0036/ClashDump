@@ -13,7 +13,7 @@ class SuspendModule(service: Service) : Module<Unit>(service) {
     override suspend fun run() {
         val interactive = service.getSystemService<PowerManager>()?.isInteractive ?: true
 
-        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(!interactive)
+        com.github.kr328.clash.core.Clash.suspendCore(!interactive)
 
         val screenToggle = receiveBroadcast(false, Channel.CONFLATED) {
             addAction(Intent.ACTION_SCREEN_ON)
@@ -24,25 +24,25 @@ class SuspendModule(service: Service) : Module<Unit>(service) {
             while (true) {
                 when (screenToggle.receive().action) {
                     Intent.ACTION_SCREEN_ON -> {
-                        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(false)
+                        com.github.kr328.clash.core.Clash.suspendCore(false)
 
                         Log.d("Clash resumed")
                     }
                     Intent.ACTION_SCREEN_OFF -> {
-                        _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(true)
+                        com.github.kr328.clash.core.Clash.suspendCore(true)
 
                         Log.d("Clash suspended")
                     }
                     else -> {
                         // unreachable
 
-                        _root_ide_package_.com.github.kr328.clash.core.Clash.healthCheckAll()
+                        com.github.kr328.clash.core.Clash.healthCheckAll()
                     }
                 }
             }
         } finally {
             withContext(NonCancellable) {
-                _root_ide_package_.com.github.kr328.clash.core.Clash.suspendCore(false)
+                com.github.kr328.clash.core.Clash.suspendCore(false)
             }
         }
     }

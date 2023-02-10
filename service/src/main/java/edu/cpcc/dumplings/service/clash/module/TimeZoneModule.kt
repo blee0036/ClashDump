@@ -13,7 +13,7 @@ class TimeZoneModule(service: Service) : Module<Unit>(service) {
         while (true) {
             val timeZone = TimeZone.getDefault()
 
-            _root_ide_package_.com.github.kr328.clash.core.Clash.notifyTimeZoneChanged(timeZone.id, timeZone.rawOffset)
+            com.github.kr328.clash.core.Clash.notifyTimeZoneChanged(timeZone.id, timeZone.rawOffset)
 
             timeZones.receive()
         }

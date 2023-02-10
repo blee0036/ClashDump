@@ -40,8 +40,8 @@ class DynamicNotificationModule(service: Service) : Module<Unit>(service) {
         )
 
     private fun update() {
-        val now = _root_ide_package_.com.github.kr328.clash.core.Clash.queryTrafficNow()
-        val total = _root_ide_package_.com.github.kr328.clash.core.Clash.queryTrafficTotal()
+        val now = com.github.kr328.clash.core.Clash.queryTrafficNow()
+        val total = com.github.kr328.clash.core.Clash.queryTrafficTotal()
 
         val uploading = now.trafficUpload()
         val downloading = now.trafficDownload()
