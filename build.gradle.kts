@@ -55,7 +55,7 @@ subprojects {
             if (!isApp) {
                 consumerProguardFiles("consumer-rules.pro")
             } else {
-                setProperty("archivesBaseName", "cfa-$versionName")
+                setProperty("archivesBaseName", "dmp-$versionName")
             }
         }
 
